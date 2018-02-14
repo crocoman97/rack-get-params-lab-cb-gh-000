@@ -27,7 +27,7 @@ class Application
         @@cart << add_item
         resp.write "#{add_item} is one of our cart"
       else 
-        resp.write "Couldn't find #{search_term}"
+        resp.write "Couldn't find #{add_item}"
       end
       
     elsif req.path.match("/search/")
