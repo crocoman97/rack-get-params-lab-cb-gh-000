@@ -20,7 +20,7 @@ class Application
           resp.write "#{item}\n"
         end
       end
-      
+    
     elsif req.path.match("/add/")
       add_item = req.params["item"]
       if @@items.include?(add_item)
