@@ -12,13 +12,13 @@ class Application
       @@items.each { |i|
         resp.write "#{i}\n"
       }
-    elsif req.path.match("/cart/")
+    elsif req.path.match(/cart/)
       if @@cart.empty?
         resp.write "Your cart is empty"
       else
-        @@cart.each { |i|
-          resp.write "#{i}\n"
-        }
+        @@cart.each do |item|
+          resp.write "#{item}\n"
+        end
       end
       
     elsif req.path.match("/add/")
